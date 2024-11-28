@@ -10,7 +10,7 @@ public class Item {
         this.inventory.add(quantity, name);
     }
 
-    public void searchItem(String itemName) {
+    public void searchItem(Item itemName) {
         boolean isFound = false;
         int index = -1;
 
@@ -24,7 +24,7 @@ public class Item {
 
         if (isFound) {
             Item foundItem = inventory.get(index);
-            System.out.println(itemName + " is found with " + "the quantity: " + foundItem.quantity);
+            System.out.println(itemName + " is found with " + "the quantity: " + foundItem);
         } else {
             System.out.println(itemName + " item was not found.");
         }
