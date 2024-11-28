@@ -2,20 +2,20 @@ package Oliva;
 
 import java.util.Vector;
 
-public class Item {
+public class Product {
 
-    private Vector<Item> inventory = new Vector<>();
+    private Vector<Product> name = new Vector<>();
 
-    public void addItem(Item name, int quantity) {
-        this.inventory.add(quantity, name);
+    public void addItem(Product name, int quantity) {
+        this.name.add(quantity, name);
     }
 
-    public void searchItem(Item itemName) {
+    public void searchItem(Product itemName) {
         boolean isFound = false;
         int index = -1;
 
-        for (int i = 0; i < this.inventory.size(); i++) {
-            if (this.inventory.get(i).equals(itemName)) {
+        for (int i = 0; i < this.name.size(); i++) {
+            if (this.name.get(i).equals(itemName)) {
                 isFound = true;
                 index = i;
                 break;
@@ -23,7 +23,7 @@ public class Item {
         }
 
         if (isFound) {
-            Item foundItem = inventory.get(index);
+            Product foundItem = name.get(index);
             System.out.println(itemName + " is found with " + "the quantity: " + foundItem);
         } else {
             System.out.println(itemName + " item was not found.");
