@@ -4,7 +4,9 @@ import java.util.Vector;
 
 public class Product {
 
-    private Vector<Product> name = new Vector<>();
+    public Product () {
+
+    }
 
     public void addItem(Product name, int quantity) {
         this.name.add(quantity, name);
