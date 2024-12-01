@@ -10,6 +10,9 @@ public class Product {
         products = new ArrayList<>();
     }
 
+    //for removeProduct
+    public Product(String name) {}
+
     public void addProductName(Product name) {
         products.add(name);
         System.out.println("The product has been addded.");
@@ -27,7 +30,7 @@ public class Product {
         products.add(qty);
     }
 
-    public void searchProduct(Product name) {
+    /*public void searchProduct(Product name) {
         boolean isFound = false;
         int index = -1;
 
@@ -45,13 +48,61 @@ public class Product {
         } else {
             System.out.println(name + " item was not found.");
         }
+    }*/
+
+    /*public void removeProduct(String name) {
+        boolean isFound = false;
+        int index = -1;
+
+        for (int i = 0; i < products.size(); i++) {
+            if (products.get(i).equals(name)) {
+                isFound = true;
+                index = i;
+                break;
+            }
+        }
+
+        if (isFound) {
+            Product foundItem = products.get(index);
+
+            for (Product i: products) {
+                products.remove(foundItem);
+            }
+
+            System.out.println("Product removed.");
+        } else {
+            System.out.println("Product not found.");
+        }
+    }*/
+
+    public void removeProduct(Product name) {
+        int index;
+        boolean isFound = false;
+
+        for (Product i: products) {
+            products.equals(name);
+            isFound = true;
+            break;
+        }
+
+        if (isFound) {
+            index = products.indexOf(name);
+
+            for (Product i: products) {
+                products.remove(index);
+            }
+
+            System.out.println("Product removed.");
+        } else {
+            System.out.println("Product not found.");
+        }
     }
 
     public void displayInfo() {
         System.out.println("");
     }
 
-    //method to call displayInfo method in child classes //Instead put this in main function
+    //method to call displayInfo method in child classes
     public void productDetails() {
         for (Product i: products) {
             i.displayInfo();

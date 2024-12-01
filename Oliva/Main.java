@@ -8,7 +8,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Add product name: ");
-        String prodName = sc.next();
+        String prodName = sc.next().toLowerCase();
         product.addProductName(new ProductName(prodName));
 
         System.out.println("Add product id: ");
@@ -17,7 +17,7 @@ public class Main {
 
         System.out.println("Add product description: ");
         sc.next();
-        String prodDesc = sc.next();
+        String prodDesc = sc.next().toLowerCase();
         product.addProductDesc(new ProductDesc(prodDesc));
 
         System.out.println("Add product quantity: ");
@@ -25,6 +25,10 @@ public class Main {
         product.addProductQty(new ProductQty(prodQty));
 
         product.productDetails();
+
+        System.out.println("Remove a product(name): ");
+        prodName = sc.next().toLowerCase();
+        product.removeProduct(new Product(prodName));
 
         sc.close();
     }
