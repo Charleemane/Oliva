@@ -1,6 +1,6 @@
 package Oliva;
 
-abstract class ProductDetail {
+abstract class ProductDetail extends Product{
 
     protected String string;
     protected int integer;

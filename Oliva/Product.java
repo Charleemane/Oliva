@@ -1,10 +1,14 @@
 package Oliva;
 
-import java.util.Vector;
+import java.util.ArrayList;
 
 public class Product {
 
-    private Vector<Product> products = new Vector<>();
+    private ArrayList<Product> products;
+
+    public Product() {
+        products = new ArrayList<>();
+    }
 
     public void addProduct(Product name) {
         products.add(name);
