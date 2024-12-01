@@ -5,27 +5,24 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Product product = new Product();
-        //ProductID productID = new ProductID();
-        //ProductQty productQty = new ProductQty();
-        //ProductDesc productDesc = new ProductDesc();
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Add product name: ");
         String prodName = sc.next();
-        product.addProduct(new ProductName(prodName));
-        //productID.addProductID(productID);
-        //productQty.addProductQty(productQty);
-        //productDesc.addProductDesc(productDesc);
+        product.addProductName(new ProductName(prodName));
 
-        //product.addProduct(product);
-        //productID.addProductID(productID);
-        //productQty.addProductQty(productQty);
-        //productDesc.addProductDesc(productDesc);
+        System.out.println("Add product id: ");
+        int prodId = sc.nextInt();
+        product.addProductID(new ProductID(prodId));
 
-        //product.addProduct(product);
-        //productID.addProductID(productID);
-        //productQty.addProductQty(productQty);
-        //productDesc.addProductDesc(productDesc);
+        System.out.println("Add product description: ");
+        String prodDesc = sc.next();
+        product.addProductDesc(new ProductDesc(prodDesc));
+
+        System.out.println("Add product id: ");
+        int prodQty = sc.nextInt();
+        product.addProductQty(new ProductQty(prodQty));
+
 
         /*
         for (int i = 0; i < product.Size(); i++) {

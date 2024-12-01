@@ -10,9 +10,21 @@ public class Product {
         products = new ArrayList<>();
     }
 
-    public void addProduct(Product name) {
+    public void addProductName(Product name) {
         products.add(name);
-        System.out.println(name + "has been addded.");
+        System.out.println("The product has been addded.");
+    }
+
+    public void addProductID(Product id) {
+        products.add(id);
+    }
+
+    public void addProductDesc(Product desc) {
+        products.add(desc);
+    }
+
+    public void addProductQty(Product qty) {
+        products.add(qty);
     }
 
     public void searchProduct(Product name) {
@@ -35,21 +47,10 @@ public class Product {
         }
     }
 
-    public void displayName() {
-        System.out.printf("%n");
-        System.out.println("Product name is " + products);
-    }
-
-    public int Size() {
-        int size = products.size();
-        return size;
-    }
-
     //method to call displayInfo method in child classes //Instead put this in main function
-    /*public void productDetails() {
-        for (int i = 0; i < products.size(); i++) {
-            displayName();
-            ProductID.displayID();
+    public void productDetails() {
+        for (Product i: products) {
+            ProductDetail.displayInfo();
         }
-    }*/
+    }
 }

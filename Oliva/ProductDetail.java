@@ -12,4 +12,14 @@ abstract class ProductDetail extends Product{
     public ProductDetail (int integer) {
         this.integer = integer;
     }
+
+    public String getString() {
+        return this.string;
+    }
+
+    public int getInt() {
+        return this.integer;
+    }
+
+    abstract void displayInfo();
 }
