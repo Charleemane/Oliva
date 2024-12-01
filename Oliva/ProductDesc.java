@@ -2,10 +2,11 @@ package Oliva;
 
 import java.util.Vector;
 
-public class ProductDesc {
+public class ProductDesc extends ProductDetail {
 
-    private Vector<ProductDesc> productDesc = new Vector<>();
-
+    public ProductDesc (String desc) {
+        super(desc);
+    }
     public void addProductDesc(ProductDesc desc) {
         productDesc.add(desc);
         System.out.println(desc + "has been addded.");

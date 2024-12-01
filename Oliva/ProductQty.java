@@ -2,9 +2,11 @@ package Oliva;
 
 import java.util.Vector;
 
-public class ProductQty extends Product{
+public class ProductQty extends ProductDetail{
 
-    private Vector<ProductQty> productQty = new Vector<>();
+    public ProductQty (int qty) {
+        super(qty);
+    }
 
     public void addProductQty(ProductQty qty) {
         productQty.add(qty);

@@ -1,5 +1,8 @@
 package Oliva;
 
-public class ProductName {
-    
+public class ProductName extends ProductDetail{
+
+    public ProductName (String name) {
+        super(name);
+    }
 }

@@ -2,9 +2,11 @@ package Oliva;
 
 import java.util.Vector;
 
-public class ProductID extends ProductDetails{
+public class ProductID extends ProductDetail{
 
-    private Vector<ProductID> productID = new Vector<>();
+    public ProductID (int id) {
+        super(id);
+    }
 
     public void addProductID(ProductID id) {
         productID.add(id);
