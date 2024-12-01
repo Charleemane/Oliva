@@ -47,10 +47,14 @@ public class Product {
         }
     }
 
+    public void displayInfo() {
+        System.out.println("");
+    }
+
     //method to call displayInfo method in child classes //Instead put this in main function
     public void productDetails() {
         for (Product i: products) {
-            ProductDetail.displayInfo();
+            i.displayInfo();
         }
     }
 }

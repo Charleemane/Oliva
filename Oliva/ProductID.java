@@ -6,7 +6,8 @@ public class ProductID extends ProductDetail{
         super(id);
     }
 
+    @Override
     public void displayInfo() {
-        System.out.println("Product name is " + super.getInt() + ".");
+        System.out.println("Product id is " + super.getInt() + ".");
     }
 }

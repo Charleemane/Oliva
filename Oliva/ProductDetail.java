@@ -21,5 +21,5 @@ abstract class ProductDetail extends Product{
         return this.integer;
     }
 
-    abstract void displayInfo();
+    //abstract void displayInfo();
 }

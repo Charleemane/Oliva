@@ -16,21 +16,16 @@ public class Main {
         product.addProductID(new ProductID(prodId));
 
         System.out.println("Add product description: ");
+        sc.next();
         String prodDesc = sc.next();
         product.addProductDesc(new ProductDesc(prodDesc));
 
-        System.out.println("Add product id: ");
+        System.out.println("Add product quantity: ");
         int prodQty = sc.nextInt();
         product.addProductQty(new ProductQty(prodQty));
 
+        product.productDetails();
 
-        /*
-        for (int i = 0; i < product.Size(); i++) {
-            product.displayName();
-            //productID.displayID();
-            //productQty.displayQty();
-            //productDesc.displayDesc();
-        }
-        */
+        sc.close();
     }
 }

@@ -6,7 +6,8 @@ public class ProductQty extends ProductDetail{
         super(qty);
     }
 
+    @Override
     public void displayInfo() {
-        System.out.println("Product name is " + super.getInt() + ".");
+        System.out.println("Product quantity is " + super.getInt() + ".");
     }
 }

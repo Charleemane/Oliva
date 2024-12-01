@@ -6,6 +6,7 @@ public class ProductName extends ProductDetail{
         super(name);
     }
 
+    @Override
     public void displayInfo() {
         System.out.println("Product name is " + super.getString() + ".");
     }
