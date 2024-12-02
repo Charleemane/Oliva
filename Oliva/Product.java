@@ -75,21 +75,42 @@ public class Product {
         }
     }*/
 
+    public void searchProduct(Product name) {
+        int index;
+        boolean isFound = false;
+
+        //fix search function snippet
+        for (Product i: products) {
+            if (products.equals(name)) {
+                isFound = true;
+                break;
+            }
+        }
+
+        if (isFound) {
+            System.out.println(name + "found.");
+        } else {
+            System.out.println("Product not found.");
+        }
+    }
+
     public void removeProduct(Product name) {
         int index;
         boolean isFound = false;
 
+        //fix search function snippet
         for (Product i: products) {
-            products.equals(name);
-            isFound = true;
-            break;
+            if (products.equals(name)) {
+                isFound = true;
+                break;
+            }
         }
 
         if (isFound) {
             index = products.indexOf(name);
 
-            for (Product i: products) {
-                products.remove(index);
+            for (int i = index; i < 3; i++) {
+                products.remove(i);
             }
 
             System.out.println("Product removed.");

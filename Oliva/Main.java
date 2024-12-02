@@ -26,6 +26,10 @@ public class Main {
 
         product.productDetails();
 
+        System.out.println("Search for a product(name): ");
+        prodName = sc.next().toLowerCase();
+        product.searchProduct(new Product(prodName));
+
         System.out.println("Remove a product(name): ");
         prodName = sc.next().toLowerCase();
         product.removeProduct(new Product(prodName));
