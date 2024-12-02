@@ -10,27 +10,109 @@ public class Product {
         products = new ArrayList<>();
     }
 
-    //for removeProduct
-    public Product(String name) {}
+    //testing
+    public void addProdName (String name) {
+        Product prodName = new Product(name);
+        products.add(prodName);
+    }
 
-    public void addProductName(Product name) {
+    public void addProdId (int id) {
+        Product prodId = new Product(id);
+        products.add(prodId);
+    }
+
+    public void addProdDesc (String desc) {
+        Product prodDesc = new Product(desc);
+        products.add(prodDesc);
+    }
+
+    public void addProdQty (int qty) {
+        Product prodQty = new Product(qty);
+        products.add(prodQty);
+    }
+
+    //for removeProduct
+    public Product(String string) {}
+    public Product(int integer) {}
+}
+
+//Previous methods
+
+//for removeProduct
+//public Product(String name) {}
+
+/*public void addProductName(Product name) {
         products.add(name);
         System.out.println("The product has been addded.");
-    }
+    }*/
 
-    public void addProductID(Product id) {
+    /*public void addProductID(Product id) {
         products.add(id);
-    }
+    }*/
 
-    public void addProductDesc(Product desc) {
+    /*public void addProductDesc(Product desc) {
         products.add(desc);
-    }
+    }*/
 
-    public void addProductQty(Product qty) {
+    /*public void addProductQty(Product qty) {
         products.add(qty);
-    }
+    }*/
 
-    /*public void searchProduct(Product name) {
+
+    /*
+    public void searchProduct(Product name) {
+        int index;
+
+        for (int i = 0; i < products.size(); i++) {
+            if (name.equals(products.get(i))) {
+                System.out.println(name.getClass().getName() + "found.");
+            } else {
+                System.out.println("Product not found.");
+            }
+        }
+    }
+    */
+
+    /*
+    public void removeProduct(Product name) {
+        int index;
+
+        for (int i = 0; i < products.size(); i++) {
+            if (name.equals(products.get(i))) {
+                index = i;
+                for (i = index; i < 3; i++) {
+                    products.remove(i);
+                }
+                System.out.println("Product removed.");
+            } else {
+                System.out.println("Product not found.");
+            }
+        }
+    }
+    */
+
+    /*
+    public void displayInfo() {
+        System.out.println("");
+    }
+    */
+
+    /*
+    //method to call displayInfo method in child classes
+    public void productDetails() {
+        for (Product i: products) {
+            i.displayInfo();
+        }
+    }
+    */
+
+
+
+
+
+//Old snippets
+
+/*public void searchProduct(Product name) {
         boolean isFound = false;
         int index = -1;
 
@@ -74,59 +156,3 @@ public class Product {
             System.out.println("Product not found.");
         }
     }*/
-
-    public void searchProduct(Product name) {
-        int index;
-        boolean isFound = false;
-
-        //fix search function snippet
-        for (Product i: products) {
-            if (products.equals(name)) {
-                isFound = true;
-                break;
-            }
-        }
-
-        if (isFound) {
-            System.out.println(name + "found.");
-        } else {
-            System.out.println("Product not found.");
-        }
-    }
-
-    public void removeProduct(Product name) {
-        int index;
-        boolean isFound = false;
-
-        //fix search function snippet
-        for (Product i: products) {
-            if (products.equals(name)) {
-                isFound = true;
-                break;
-            }
-        }
-
-        if (isFound) {
-            index = products.indexOf(name);
-
-            for (int i = index; i < 3; i++) {
-                products.remove(i);
-            }
-
-            System.out.println("Product removed.");
-        } else {
-            System.out.println("Product not found.");
-        }
-    }
-
-    public void displayInfo() {
-        System.out.println("");
-    }
-
-    //method to call displayInfo method in child classes
-    public void productDetails() {
-        for (Product i: products) {
-            i.displayInfo();
-        }
-    }
-}
