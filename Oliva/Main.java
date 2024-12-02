@@ -7,8 +7,7 @@ public class Main {
         Product product = new Product();
         Scanner sc = new Scanner(System.in);
 
-        //First Trial
-        /*
+        //First Trial Code
         System.out.println("Add product name: ");
         String prodName = sc.next().toLowerCase();
         product.addProductName(new ProductName(prodName));
@@ -35,7 +34,6 @@ public class Main {
         System.out.println("Remove a product(name): ");
         prodName = sc.next().toLowerCase();
         product.removeProduct(new Product(prodName));
-        */
 
         sc.close();
     }

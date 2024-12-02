@@ -10,56 +10,26 @@ public class Product {
         products = new ArrayList<>();
     }
 
-    //testing
-    public void addProdName (String name) {
-        Product prodName = new Product(name);
-        products.add(prodName);
-    }
-
-    public void addProdId (int id) {
-        Product prodId = new Product(id);
-        products.add(prodId);
-    }
-
-    public void addProdDesc (String desc) {
-        Product prodDesc = new Product(desc);
-        products.add(prodDesc);
-    }
-
-    public void addProdQty (int qty) {
-        Product prodQty = new Product(qty);
-        products.add(prodQty);
-    }
-
-    //for removeProduct
-    public Product(String string) {}
-    public Product(int integer) {}
-}
-
-//Previous methods
-
 //for removeProduct
-//public Product(String name) {}
+public Product(String name) {}
 
-/*public void addProductName(Product name) {
+    public void addProductName(Product name) {
         products.add(name);
         System.out.println("The product has been addded.");
-    }*/
+    }
 
-    /*public void addProductID(Product id) {
+    public void addProductID(Product id) {
         products.add(id);
-    }*/
+    }
 
-    /*public void addProductDesc(Product desc) {
+    public void addProductDesc(Product desc) {
         products.add(desc);
-    }*/
+    }
 
-    /*public void addProductQty(Product qty) {
+    public void addProductQty(Product qty) {
         products.add(qty);
-    }*/
+    }
 
-
-    /*
     public void searchProduct(Product name) {
         int index;
 
@@ -71,9 +41,7 @@ public class Product {
             }
         }
     }
-    */
 
-    /*
     public void removeProduct(Product name) {
         int index;
 
@@ -89,20 +57,54 @@ public class Product {
             }
         }
     }
-    */
 
-    /*
+
     public void displayInfo() {
         System.out.println("");
     }
-    */
 
-    /*
+
     //method to call displayInfo method in child classes
     public void productDetails() {
         for (Product i: products) {
             i.displayInfo();
         }
+    }
+}
+
+//Experimental
+
+    /*
+    public Product(String string) {}
+    public Product(int integer) {}
+
+    public void addProdName(String name) {
+        Product prodName = new Product(name);
+        products.add(prodName);
+    }
+
+    public void addProdId(int id) {
+        Product prodId = new Product(id);
+        products.add(prodId);
+    }
+
+    public void addProdDesc(String desc) {
+        Product prodDesc = new Product(desc);
+        products.add(prodDesc);
+    }
+
+    public void addProdQty(int qty) {
+        Product prodQty = new Product(qty);
+        products.add(prodQty);
+    }
+
+    public void searchProd(String name) {
+    }
+
+    public void removeProd(String name) {
+    }
+
+    public void displayInfo () {
     }
     */
 
