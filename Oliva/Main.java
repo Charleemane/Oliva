@@ -41,7 +41,6 @@ public class Main {
         // prodQty = sc.nextInt();
         // product.addProductQty(new Product(prodQty));
 
-        //product.productDetails();
         product.displayInfo();
 
         System.out.println("Search for a product(name): ");
@@ -52,7 +51,6 @@ public class Main {
         prodName = sc.next().toLowerCase();
         product.removeProduct(prodName);
 
-        //product.productDetails();
         product.displayInfo();
 
         sc.close();
