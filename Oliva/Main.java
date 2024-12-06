@@ -8,7 +8,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Add product name: ");
-        String prodName = sc.next().toLowerCase();
+        String prodName = sc.nextLine().toLowerCase();
         product.addProductName(new Product(prodName));
 
         System.out.println("Add product id: ");
@@ -16,30 +16,31 @@ public class Main {
         product.addProductID(new Product(prodId));
 
         System.out.println("Add product description: ");
-        sc.next();
-        String prodDesc = sc.next().toLowerCase();
+        sc.nextLine();
+        String prodDesc = sc.nextLine().toLowerCase();
         product.addProductDesc(new Product(prodDesc));
 
         System.out.println("Add product quantity: ");
         int prodQty = sc.nextInt();
         product.addProductQty(new Product(prodQty));
 
-        // System.out.println("Add product name: ");
-        // prodName = sc.next().toLowerCase();
-        // product.addProductName(new Product(prodName));
+        System.out.println("Add product name: ");
+        sc.nextLine();
+        prodName = sc.nextLine().toLowerCase();
+        product.addProductName(new Product(prodName));
 
-        // System.out.println("Add product id: ");
-        // prodId = sc.nextInt();
-        // product.addProductID(new Product(prodId));
+        System.out.println("Add product id: ");
+        prodId = sc.nextInt();
+        product.addProductID(new Product(prodId));
 
-        // System.out.println("Add product description: ");
-        // sc.next();
-        // prodDesc = sc.next().toLowerCase();
-        // product.addProductDesc(new Product(prodDesc));
+        System.out.println("Add product description: ");
+        sc.nextLine();
+        prodDesc = sc.nextLine().toLowerCase();
+        product.addProductDesc(new Product(prodDesc));
 
-        // System.out.println("Add product quantity: ");
-        // prodQty = sc.nextInt();
-        // product.addProductQty(new Product(prodQty));
+        System.out.println("Add product quantity: ");
+        prodQty = sc.nextInt();
+        product.addProductQty(new Product(prodQty));
 
         product.displayInfo();
 
