@@ -7,33 +7,53 @@ public class Main {
         Product product = new Product();
         Scanner sc = new Scanner(System.in);
 
-        //First Trial Code
         System.out.println("Add product name: ");
         String prodName = sc.next().toLowerCase();
-        product.addProductName(new ProductName(prodName));
+        product.addProductName(new Product(prodName));
 
         System.out.println("Add product id: ");
         int prodId = sc.nextInt();
-        product.addProductID(new ProductID(prodId));
+        product.addProductID(new Product(prodId));
 
         System.out.println("Add product description: ");
         sc.next();
         String prodDesc = sc.next().toLowerCase();
-        product.addProductDesc(new ProductDesc(prodDesc));
+        product.addProductDesc(new Product(prodDesc));
 
         System.out.println("Add product quantity: ");
         int prodQty = sc.nextInt();
-        product.addProductQty(new ProductQty(prodQty));
+        product.addProductQty(new Product(prodQty));
 
-        product.productDetails();
+        // System.out.println("Add product name: ");
+        // prodName = sc.next().toLowerCase();
+        // product.addProductName(new Product(prodName));
+
+        // System.out.println("Add product id: ");
+        // prodId = sc.nextInt();
+        // product.addProductID(new Product(prodId));
+
+        // System.out.println("Add product description: ");
+        // sc.next();
+        // prodDesc = sc.next().toLowerCase();
+        // product.addProductDesc(new Product(prodDesc));
+
+        // System.out.println("Add product quantity: ");
+        // prodQty = sc.nextInt();
+        // product.addProductQty(new Product(prodQty));
+
+        //product.productDetails();
+        product.displayInfo();
 
         System.out.println("Search for a product(name): ");
         prodName = sc.next().toLowerCase();
-        product.searchProduct(new Product(prodName));
+        product.searchProduct(prodName);
 
         System.out.println("Remove a product(name): ");
         prodName = sc.next().toLowerCase();
-        product.removeProduct(new Product(prodName));
+        product.removeProduct(prodName);
+
+        //product.productDetails();
+        product.displayInfo();
 
         sc.close();
     }

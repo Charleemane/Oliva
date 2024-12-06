@@ -5,13 +5,28 @@ import java.util.ArrayList;
 public class Product {
 
     private ArrayList<Product> products;
+    protected String string;
+    protected int integer;
+
+    public Product(String NameOrDesc) {
+        string = NameOrDesc;
+    }
+
+    public Product(int IdOrQty) {
+        integer = IdOrQty;
+    }
+
+    public String getString() {
+        return this.string;
+    }
+
+    public int getInt() {
+        return this.integer;
+    }
 
     public Product() {
         products = new ArrayList<>();
     }
-
-//for removeProduct
-public Product(String name) {}
 
     public void addProductName(Product name) {
         products.add(name);
@@ -30,44 +45,48 @@ public Product(String name) {}
         products.add(qty);
     }
 
-    public void searchProduct(Product name) {
-        int index;
-
+    public void searchProduct(String name) {
         for (int i = 0; i < products.size(); i++) {
-            if (name.equals(products.get(i))) {
-                System.out.println(name.getClass().getName() + "found.");
+            if (products.get(i).getString().equalsIgnoreCase(name)) {
+                System.out.println("Product " + name + " found.");
+                break;
             } else {
                 System.out.println("Product not found.");
             }
         }
     }
 
-    public void removeProduct(Product name) {
-        int index;
-
+    public void removeProduct(String name) {
         for (int i = 0; i < products.size(); i++) {
-            if (name.equals(products.get(i))) {
-                index = i;
-                for (i = index; i < 3; i++) {
-                    products.remove(i);
+            if (products.get(i).getString().equalsIgnoreCase(name)) {
+                int index = i;
+                for (int j = index; j < index + 4; j++) {
+                    products.remove(index);
                 }
-                System.out.println("Product removed.");
+                break;
             } else {
                 System.out.println("Product not found.");
             }
         }
     }
-
 
     public void displayInfo() {
-        System.out.println("");
-    }
+        int integer;
+        String string;
 
+        if (products.size() != 0) {
+            for (int i = 0; i < products.size(); i++) {
+                integer = products.get(i).getInt();
+                string = products.get(i).getString();
 
-    //method to call displayInfo method in child classes
-    public void productDetails() {
-        for (Product i: products) {
-            i.displayInfo();
+                if (integer == 0) {
+                    System.out.println(string);
+                } else {
+                    System.out.println(integer);
+                }
+            }
+        } else {
+            System.out.println("No products found");
         }
     }
 }
